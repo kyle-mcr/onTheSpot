@@ -19,15 +19,28 @@
   }
   .accordion{
       width: 50%;
+    background-size: cover;
+    min-height: 900px;
+    min-width: 100%;
+    background-image: url('https://visualcocaine.org/public/uploads/large/81497721030kokdx93yy4rs2fvgviqbxhc53u3x2ppgu7im4mqs2xbpgfvpfsogkj8cjdiinu8so47gf6yui1g89eafqmz3aj9by3zvtb1demhw.jpg');
   }
-@media only screen and (max-device-width: 480px) {
-    .container {
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100%;
-            background-image: url('https://r1.ilikewallpaper.net/pic/201901/stainless-steel-spoon_75665_1125x2436_640.jpg');
+.accordion{
+    width: 70%;
+}
+h4{
+    font: 400 55px/1 'Oleo Script', Helvetica, sans-serif;
+    color: black;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+    padding-top: 2%;
+}
 
+@media only screen and (max-width: 480px) {
+    .container {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        background-image: url('https://r1.ilikewallpaper.net/pic/201901/stainless-steel-spoon_75665_1125x2436_640.jpg');
     }
     .accordion{
         width:100%;
@@ -40,4 +53,27 @@
     padding-top: 2%;
     margin-bottom:2px;
   }
+
+    .container h4{
+        font-size: 45px;
+    }
 }
+@media only screen and (min-width: 480px) and (max-width: 1080px) {
+    .container {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+    .accordion{
+        width:80%;
+        font-size: 20px;
+    }
+    .accordion button{
+      font-size: 23px;
+    }
+    .container h4{
+        font-size: 65px;
+    }
+}
+
