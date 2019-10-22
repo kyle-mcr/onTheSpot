@@ -27,12 +27,7 @@
 .accordion{
     width: 70%;
 }
-h4{
-    font: 400 55px/1 'Oleo Script', Helvetica, sans-serif;
-    color: black;
-    text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
-    padding-top: 2%;
-}
+
 
 @media only screen and (max-width: 480px) {
     .container {
