@@ -4,25 +4,25 @@
 }
 .container {
 
-      background-size: cover;
-      min-height: 900px;
-      min-width: 100%;
-      background-image: url('https://visualcocaine.org/public/uploads/large/81497721030kokdx93yy4rs2fvgviqbxhc53u3x2ppgu7im4mqs2xbpgfvpfsogkj8cjdiinu8so47gf6yui1g89eafqmz3aj9by3zvtb1demhw.jpg');
-
-}
-.accordion{
-    width: 50%;
-}
-@media only screen and (max-device-width: 480px) {
-  .container {
-          background-position: center center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          height: 100%;
-          background-image: url('https://r1.ilikewallpaper.net/pic/201901/stainless-steel-spoon_75665_1125x2436_640.jpg');
+        background-size: cover;
+        min-height: 900px;
+        min-width: 100%;
+        background-image: url('https://visualcocaine.org/public/uploads/large/81497721030kokdx93yy4rs2fvgviqbxhc53u3x2ppgu7im4mqs2xbpgfvpfsogkj8cjdiinu8so47gf6yui1g89eafqmz3aj9by3zvtb1demhw.jpg');
 
   }
   .accordion{
-      width:100%;
+      width: 50%;
   }
-}
+@media only screen and (max-device-width: 480px) {
+    .container {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            background-image: url('https://r1.ilikewallpaper.net/pic/201901/stainless-steel-spoon_75665_1125x2436_640.jpg');
+
+    }
+    .accordion{
+        width:100%;
+    }
+  }

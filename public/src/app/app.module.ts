@@ -15,7 +15,8 @@ import { EditComponent } from './edit/edit.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    EditComponent
+    EditComponent,
+   
   ],
   imports: [
     BrowserModule,
