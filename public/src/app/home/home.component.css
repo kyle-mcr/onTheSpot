@@ -3,6 +3,22 @@
   padding: 0;
 }
 .container {
+
+        background-size: cover;
+        min-height: 900px;
+        min-width: 100%;
+        background-image: url('https://visualcocaine.org/public/uploads/large/81497721030kokdx93yy4rs2fvgviqbxhc53u3x2ppgu7im4mqs2xbpgfvpfsogkj8cjdiinu8so47gf6yui1g89eafqmz3aj9by3zvtb1demhw.jpg');
+}
+        h4{
+            font: 400 50px/1 'Oleo Script', Helvetica, sans-serif;
+            color: white;
+            text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+            padding-top: 2%;
+            text-shadow: 2px 2px 1px rgba(206,89,55,0.47);
+            margin-bottom:2px;
+  }
+  .accordion{
+      width: 50%;
     background-size: cover;
     min-height: 900px;
     min-width: 100%;
@@ -29,6 +45,15 @@ h4{
     .accordion{
         width:100%;
     }
+  
+  h4{
+    font: 400 20px/1 'Oleo Script', Helvetica, sans-serif;
+    color: #2b2b2b;
+    text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.47);
+    padding-top: 2%;
+    margin-bottom:2px;
+  }
+
     .container h4{
         font-size: 45px;
     }
