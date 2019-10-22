@@ -9,6 +9,42 @@
         min-width: 100%;
         background-image: url('https://visualcocaine.org/public/uploads/large/81497721030kokdx93yy4rs2fvgviqbxhc53u3x2ppgu7im4mqs2xbpgfvpfsogkj8cjdiinu8so47gf6yui1g89eafqmz3aj9by3zvtb1demhw.jpg');
 }
+
+button {
+	box-shadow: 3px 4px 0px 0px #899599;
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	background-color:#ededed;
+	border-radius:4px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#4a402b;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #e1e2ed;
+    width: 100%;
+    
+}
+button:hover {
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	background-color:#bab1ba;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+.form-check{
+    display: inline-block;
+    margin-left:2%;
+}
+.form-check:hover {
+	background:linear-gradient(to bottom, #e9fff0 5%, #ededed 100%);
+    background-color:#fafffc;
+    border-radius: 5px;
+} 
+
 h4{
     font: 400 50px/1 'Oleo Script', Helvetica, sans-serif;
     color: white;
