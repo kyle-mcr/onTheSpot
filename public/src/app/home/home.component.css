@@ -26,3 +26,9 @@
         width:100%;
     }
   }
+  h4{
+    font: 400 50px/1 'Oleo Script', Helvetica, sans-serif;
+    color: #2b2b2b;
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+    padding-top: 2%;
+  }
