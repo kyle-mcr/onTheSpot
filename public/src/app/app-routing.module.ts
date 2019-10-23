@@ -3,12 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { EditComponent } from './edit/edit.component';
 
-
 const routes: Routes = [
-  {path:'', pathMatch:'full', component:HomeComponent},
-  {path:'edit/:id', component:EditComponent},
-
-
+  {path: 'onthespot', component: HomeComponent},
+  {path:'edit', component:EditComponent},
+  {path:'', pathMatch:'full', redirectTo: '/onthespot'},
 
 ];
 
