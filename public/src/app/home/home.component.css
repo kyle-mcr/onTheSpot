@@ -43,7 +43,15 @@ button:active {
     background-color:#fafffc;
     border-radius: 5px;
 } 
-
+.card{
+  background: rgb(255, 245, 245, 0.4);
+}
+.card-body{
+  font-size: 20px;
+  color: #4a402b;
+  font-weight: bold;
+  background: rgb(243, 232, 232,0.45);
+}
 h4{
     font: 400 50px/1 'Oleo Script', Helvetica, sans-serif;
     color: white;
@@ -53,9 +61,17 @@ h4{
     margin-bottom:2px;
   }
   .accordion{
-    width: 60%;
+    width: 30%;
     background-size: cover;
     min-height: 900px;
+    display: inline-block;
+  }
+  .results{
+    width: 40%;
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 3%;
   }
 
 @media only screen and (max-width: 480px) {

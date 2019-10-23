@@ -1,7 +1,7 @@
 <div class="container">
     <h4>What Ingredients Do You Have?</h4>
     <form ngForm #checkForm="ngForm" (submit)="getClicked(checkForm)">
-        <div class="accordion" id="accordionExample">
+        <div class="accordion d-inline-block" id="accordionExample">
             <div class="card">
                 <div class="card-header" id="headingOne">
                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
@@ -12,18 +12,81 @@
 
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
-                        <div *ngFor="let i of igs">
-                            {{i.name}}<input type="checkbox" name="igsinform[i.name]" [(ngModel)]="igsinform[i.name]" 
-                                aria-label="Checkbox for following text input">
+                        <div *ngFor="let i of igs[0]">
+                            <input type="checkbox" name="igsinform[i.value]" [(ngModel)]="igsinform[i.value]"
+                                aria-label="Checkbox for following text input">{{i.name}}
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-success" type="submit">submit</button>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                        aria-expanded="true" aria-controls="collapseTwo">
+                        Sweeteners and Spices
+                    </button>
+                </div>
+
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div *ngFor="let i of igs[1]">
+                            
+                            <input type="checkbox" name="igsinform[i.value]" [(ngModel)]="igsinform[i.value]"
+                                aria-label="Checkbox for following text input">{{i.name}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree"
+                        aria-expanded="true" aria-controls="collapseThree">
+                        Dairy
+                    </button>
+                </div>
+
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div *ngFor="let i of igs[2]">
+                            
+                            <input type="checkbox" name="igsinform[i.value]" [(ngModel)]="igsinform[i.value]"
+                                aria-label="Checkbox for following text input">{{i.name}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour"
+                        aria-expanded="true" aria-controls="collapseFour">
+                        Misc
+                    </button>
+                </div>
+
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div *ngFor="let i of igs[3]">
+                            
+                            <input type="checkbox" name="igsinform[i.value]" [(ngModel)]="igsinform[i.value]"
+                                aria-label="Checkbox for following text input">{{i.name}}
+                        </div>
+                    </div>
+                </div>
+                <button class="btn" type="submit">submit</button>
+            </div>
+        </div>
+        <div class="results">
+            <div *ngFor="let i of recipesFound" class="result">
+            
+            <h5>{{i.title}}</h5>
+            <img *ngIf="i.thumbnail" src="{{i.thumbnail}}" alt="">
+            <a href="{{i.href}}">link to recipe</a>
+            <!-- <p>ingredients needed: {{i.ingredients}}</p>  -->
             </div>
         </div>
 
     </form>
-    <button class="btn btn-success" [routerLink]="['/edit']">edit</button>
+
 
     <router-outlet></router-outlet>
 </div>
