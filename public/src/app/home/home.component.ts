@@ -73,14 +73,9 @@ export class HomeComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        this.populate();
+
     }
-    // populates ngModel for twowaybinding with fields of igs
-    populate() {
-        for (let i = 0; i < this.igs.length; i++) {
-            this.igsinform[this.igs[i].value] = this.igs[i].isChecked
-        }
-    }
+
     getClicked() {
         this.recipesFound = [];
         for (let key in this.igsinform) {
@@ -105,5 +100,11 @@ export class HomeComponent implements OnInit {
 
 
     }
-
+    resetToFalse() {
+        for (let key in this.igsinform) {
+            if (this.igsinform[key] == true) {
+                this.igsinform[key] = false;
+            }
+        }
+    }
 }
