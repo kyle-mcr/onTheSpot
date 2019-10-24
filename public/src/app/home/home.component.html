@@ -13,8 +13,8 @@
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
                         <div *ngFor="let i of igs[0]">
-                            <input type="checkbox" name="igsinform[i.value]" [(ngModel)]="igsinform[i.value]"
-                                aria-label="Checkbox for following text input">{{i.name}}
+                            <label><input type="checkbox" name="igsinform[i.value]" [(ngModel)]="igsinform[i.value]"
+                                    aria-label="Checkbox for following text input">{{i.name}}</label>
                         </div>
                     </div>
                 </div>
@@ -30,9 +30,9 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                     <div class="card-body">
                         <div *ngFor="let i of igs[1]">
-                            
-                            <input type="checkbox" name="igsinform[i.value]" [(ngModel)]="igsinform[i.value]"
-                                aria-label="Checkbox for following text input">{{i.name}}
+
+                            <label><input type="checkbox" name="igsinform[i.value]" [(ngModel)]="igsinform[i.value]"
+                                    aria-label="Checkbox for following text input">{{i.name}}</label>
                         </div>
                     </div>
                 </div>
@@ -48,9 +48,9 @@
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                     <div class="card-body">
                         <div *ngFor="let i of igs[2]">
-                            
-                            <input type="checkbox" name="igsinform[i.value]" [(ngModel)]="igsinform[i.value]"
-                                aria-label="Checkbox for following text input">{{i.name}}
+
+                            <label><input type="checkbox" name="igsinform[i.value]" [(ngModel)]="igsinform[i.value]"
+                                    aria-label="Checkbox for following text input">{{i.name}}</label>
                         </div>
                     </div>
                 </div>
@@ -66,22 +66,26 @@
                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                     <div class="card-body">
                         <div *ngFor="let i of igs[3]">
-                            
-                            <input type="checkbox" name="igsinform[i.value]" [(ngModel)]="igsinform[i.value]"
-                                aria-label="Checkbox for following text input">{{i.name}}
+
+                            <label><input type="checkbox" name="igsinform[i.value]" [(ngModel)]="igsinform[i.value]"
+                                    aria-label="Checkbox for following text input">{{i.name}}</label>
                         </div>
                     </div>
                 </div>
-                <button class="btn" type="submit">submit</button>
+                <button id="subbtn" class="btn" type="submit">submit</button>
             </div>
         </div>
-        <div class="results">
-            <div *ngFor="let i of recipesFound" class="result">
-            
-            <h5>{{i.title}}</h5>
-            <img *ngIf="i.thumbnail" src="{{i.thumbnail}}" alt="">
-            <a href="{{i.href}}">link to recipe</a>
-            <!-- <p>ingredients needed: {{i.ingredients}}</p>  -->
+        <div *ngIf="recipesFound" class="results pb-4">
+            <h4 class="display-4 ml-4">Recipes!</h4>
+            <div *ngFor="let i of recipesFound" class="result mt-2 ml-4">
+                <h5>{{i.title}}</h5>
+                <div class="ingredss">
+                    <img *ngIf="i.thumbnail" src="{{i.thumbnail}}" alt="">
+                    <img *ngIf="!i.thumbnail"
+                        src="http://lehighvalleymarketplace.com/wp-content/uploads/2010/11/bakingbasics.jpg" alt="">
+                    <p><b>Ingredients needed:</b> {{i.ingredients}}</p>
+                </div>
+                <a href="{{i.href}}" target="_blank">link to recipe</a>
             </div>
         </div>
 

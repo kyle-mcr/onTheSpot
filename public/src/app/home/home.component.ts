@@ -64,7 +64,7 @@ export class HomeComponent implements OnInit {
     ]
     igsinform: any = {};
     newArry: any = [];
-    recipesFound: any = [];
+    recipesFound: any;
     newString: string = '';
     constructor(
         private http: HttpService,
@@ -73,14 +73,16 @@ export class HomeComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        // populates ngModel for twowaybinding with fields of igs
+        this.populate();
+    }
+    // populates ngModel for twowaybinding with fields of igs
+    populate() {
         for (let i = 0; i < this.igs.length; i++) {
             this.igsinform[this.igs[i].value] = this.igs[i].isChecked
         }
-        this.recipesFound = [];
     }
-
     getClicked() {
+        this.recipesFound = [];
         for (let key in this.igsinform) {
             if (this.igsinform[key] == true) {
                 this.newArry.push(key)
@@ -99,7 +101,6 @@ export class HomeComponent implements OnInit {
             for (let i = 0; i < a.results.length; i++) {
                 this.recipesFound.push(a.results[i])
             }
-            console.log(this.recipesFound)
         })
 
 

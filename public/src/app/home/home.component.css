@@ -2,8 +2,35 @@
   margin: 0;
   padding: 0;
 }
+#subbtn{
+  width: 250px;
+margin: auto; 
+ background: rgb(38, 165, 0);
+}
+#subbtn {
+  background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+  background-color:#ededed;
+  border-radius:4px;
+  border:1px solid #d6bcd6;
+  display:inline-block;
+  cursor:pointer;
+  color:#4a402b;
+  font-family:Arial;
+  font-size:17px;
+  padding:7px 25px;
+  text-decoration:none;
+ width: 93%;
+}
+#subbtn:hover {
+  background:linear-gradient(to bottom, #00ff37 5%, #0c7c08 100%);
+  background-color:#bab1ba;
+}
+#subbtn:active {
+  position:relative;
+  top:1px;
+}
 .container {
-
+        padding-bottom: 3%;
         background-size: cover;
         min-height: 900px;
         min-width: 100%;
@@ -17,7 +44,8 @@ button {
 	border:1px solid #d6bcd6;
 	display:inline-block;
 	cursor:pointer;
-	color:#4a402b;
+  color:#4a402b;
+  text-decoration: none;
 	font-family:Arial;
 	font-size:17px;
 	padding:7px 25px;
@@ -28,11 +56,15 @@ button {
 }
 button:hover {
 	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
-	background-color:#bab1ba;
+  background-color:#bab1ba;
+  text-decoration: none;
+
 }
 button:active {
 	position:relative;
-	top:1px;
+  top:1px;
+  text-decoration: none;
+
 }
 .form-check{
     display: inline-block;
@@ -61,17 +93,60 @@ h4{
     margin-bottom:2px;
   }
   .accordion{
-    width: 30%;
+    width: 35%;
     background-size: cover;
-    min-height: 900px;
     display: inline-block;
   }
+  .result{
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+  }
   .results{
-    width: 40%;
-    background-color: white;
+    width:60%;
+    background-color: rgba(255, 255, 255, 0.7);
     display: inline-block;
     vertical-align: top;
     margin-left: 3%;
+  }
+  .results img{
+    height: 130px;
+    width: 130px;
+    border-radius: 20px;
+  }
+  .result a{
+    padding: 1px 18px 1px 18px;
+    background: rgba(206,89,55,0.47);
+    border-radius: 6px;
+    margin-top: 2%;
+    text-decoration: none;
+    color: black;
+  }
+  .result a:hover {
+    background:linear-gradient(to bottom, #00ff37 5%, #0c7c08 100%);
+    background-color:#bab1ba;
+  }
+  .result a:active {
+    position:relative;
+    top:1px;
+  }
+  .result p, .result img{
+    vertical-align: top;
+    display: inline-block;
+  }
+  .result p{
+    margin-top: -20px;
+    width: 50%;
+    font-size: 16px;
+    margin-left: 2%;
+  }
+  .result h5{
+    font-size: 21px;
+    height: 55px;
+    margin-top: 3%;
+  }
+  .ingredss{
+    margin-bottom: 3%;
   }
 
 @media only screen and (max-width: 480px) {
@@ -84,6 +159,15 @@ h4{
     }
     .accordion{
         width:100%;
+    }
+    .results{
+      width: 100%;
+    }
+    .result{
+      width: 90%;
+    }
+    .results p{
+      width: 100%;
     }
   
   h4{
@@ -103,7 +187,7 @@ h4{
         height: 100vh;
     }
     .accordion{
-        width:80%;
+        width:85%;
         font-size: 20px;
     }
     .accordion button{
@@ -111,6 +195,9 @@ h4{
     }
     .container h4{
         font-size: 65px;
+    }
+    .results{
+      width: 85%;
     }
 }
 
