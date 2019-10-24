@@ -1,5 +1,9 @@
 <div class="container">
-    <h4>What Ingredients Do You Have?</h4>
+    <div class="head">
+        <h4>What Ingredients Do You Have?</h4>
+        <button id="btnd" class="btn btn-danger float-right" (click)="resetToFalse()">reset</button>
+    </div>
+    <div class="main">
     <form ngForm #checkForm="ngForm" (submit)="getClicked(checkForm)">
         <div class="accordion d-inline-block" id="accordionExample">
             <div class="card">
@@ -72,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-                <button id="subbtn" class="btn" type="submit">submit</button>
+                <button id="subbtn" type="submit">submit</button>
             </div>
         </div>
         <div *ngIf="recipesFound" class="results pb-4">
@@ -84,12 +88,14 @@
                     <img *ngIf="!i.thumbnail"
                         src="http://lehighvalleymarketplace.com/wp-content/uploads/2010/11/bakingbasics.jpg" alt="">
                     <p><b>Ingredients needed:</b> {{i.ingredients}}</p>
+
                 </div>
                 <a href="{{i.href}}" target="_blank">link to recipe</a>
+                <hr class="mt-1">
             </div>
         </div>
-
     </form>
+    </div>
 
 
     <router-outlet></router-outlet>
